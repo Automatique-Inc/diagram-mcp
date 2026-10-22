@@ -1,0 +1,17 @@
+---
+description: Use when the user asks for a diagram, chart, timeline, map or any other visual to show someone, or to change one that is on Diagram
+alwaysApply: false
+---
+
+Diagram (https://diagram.la) saves diagrams you draw as HTML and gives the user a link to share. Call `save_diagram` with ONE self-contained HTML document, a project and its `kind`, then give the user the link it returns. In a project others can see, new diagrams are drafts only their maker and the owner see. Ask before calling `publish_diagram`, and never publish without a yes.
+
+- Change a diagram with `edit_diagram` (exact find and replace); the link stays the same. If you don't have its HTML, call `get_diagram`. It returns an outline, and `find` returns the HTML around a piece of text. Use `save_diagram` with an id only for a full rewrite.
+- Save after each change the user asks for. Don't keep diagrams in local files unless the user asks for a copy.
+- After a save, look at the screenshot and warnings in the result. Fix problems before saying it is ready. `get_screenshot` shows the latest version any time.
+- Sharing is the user's to do on the Diagram site, never through these tools: making a diagram public, adding people, moving a project into an org. Give them the diagram's link.
+- Projects group diagrams (a lowercase slug). New projects are personal. Before creating one in an org, tell the user everyone in that org will see what is published there, and ask.
+- In a repo with `diagrams/README.md`, read and follow it. In a repo without one, call `setup_repo` first, and ask which project if it's unclear.
+- Choose the kind of diagram that best shows what the user wants to see, from all of them: timeline, Gantt chart, sequence, state machine, tree, data model, comparison, chart, map or floor plan, exploded view, mind map, flowchart, architecture. Don't default to boxes and arrows.
+- Make it look like the user's product and easy to read: https://diagram.la/docs/drawing. The `diagram` skill has the details.
+- Every save keeps a version: `list_versions` and `restore_version` bring an earlier one back. `delete_diagram` moves a diagram to the owner's archive; ask first.
+- Never put real keys or passwords in a diagram; a save that contains one is refused.

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "la.diagram/diagram",
+  "title": "Diagram",
+  "description": "Saves the diagrams your AI draws and gives you a link to share. Edits update the same link.",
+  "version": "1.0.0",
+  "websiteUrl": "https://diagram.la",
+  "icons": [
+    {
+      "src": "https://diagram.la/brand/diagram-logo-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://diagram.la/mcp"
+    }
+  ]
+}

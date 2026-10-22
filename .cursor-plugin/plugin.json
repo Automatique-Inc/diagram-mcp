@@ -1,0 +1,16 @@
+{
+  "name": "diagram",
+  "displayName": "Diagram",
+  "version": "1.0.0",
+  "description": "Saves the diagrams your agent draws at a link you can share. Edits update the same link, and every version is kept.",
+  "author": {
+    "name": "Diagram",
+    "email": "support@diagram.la",
+    "url": "https://diagram.la"
+  },
+  "homepage": "https://diagram.la",
+  "repository": "https://github.com/Automatique-Inc/diagram-mcp",
+  "license": "MIT",
+  "keywords": ["diagram", "diagrams", "architecture", "flowchart", "sequence diagram", "gantt", "timeline", "mermaid", "mcp", "sharing"],
+  "logo": "assets/logo.svg"
+}
